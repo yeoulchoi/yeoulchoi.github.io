@@ -2,149 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Yeoul Choi - Works</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yeoul Choi</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- CSP 추가: 유튜브와 사운드클라우드 iframe 허용 -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com https://w.soundcloud.com;">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fefefe;
-      color: #333;
-    }
-
-    header {
-      text-align: center;
-      padding: 40px 20px 20px 20px;
-      background: linear-gradient(to right, #fefefe, #fff8f0);
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.2em;
-    }
-
-    header p {
-      margin: 5px 0 0 0;
-      font-size: 1.2em;
-      color: #555;
-    }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      margin: 30px 0;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-      padding: 5px 10px;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #E1306C;
-    }
-
-    section {
-      max-width: 1000px;
-      margin: auto;
-      padding: 40px 20px;
-    }
-
-    section h2 {
-      text-align: center;
-      margin-bottom: 40px;
-      font-size: 2em;
-    }
-
-    #works-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 25px;
-    }
-
-    .work-card {
-      background-color: #fff;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: transform 0.3s, box-shadow 0.3s, opacity 0.8s ease, transform 0.8s ease;
-      opacity: 0;
-      transform: translateY(20px);
-    }
-
-    .work-card.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .embed-container {
-      position: relative;
-      padding-bottom: 56.25%; /* 16:9 */
-      height: 0;
-      overflow: hidden;
-    }
-
-    .embed-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
-
-    .soundcloud-container {
-      padding-bottom: 30%;
-    }
-
-    .work-card h3 {
-      margin: 15px 10px 5px 10px;
-      font-size: 1.1em;
-      text-align: center;
-    }
-
-    .work-card p {
-      margin: 0 10px 15px 10px;
-      font-size: 0.9em;
-      text-align: center;
-      color: #555;
-    }
-
-    #contact p, #contact a {
-      text-align: center;
-      font-size: 1em;
-      color: #333;
-      margin: 5px 0;
-      text-decoration: none;
-    }
-
-    #contact a.instagram-link {
-      display: inline-block;
-      background-color: #E1306C;
-      color: white;
-      padding: 6px 12px;
-      border-radius: 6px;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-
-    #contact a.instagram-link:hover {
-      background-color: #C13584;
-    }
-
-    footer {
-      text-align: center;
-      margin: 40px 0;
-      font-size: 0.9em;
-      color: #666;
-    }
-  </style>
 </head>
 <body>
   <header>
@@ -161,82 +22,77 @@
   <section id="about">
     <h2>About</h2>
     <p>
-      Yeoul Choi (b. 1995) is a Korean composer based in Indiana. Her music reflects a wide range of inspirations, from nature and Korean traditions to social issues and life beyond death.
+      Yeoul Choi (b. 1995) is a Korean composer based in Indiana. Her music reflects a wide range of inspirations, from the beauty of nature and Korean traditions to social issues and the mysteries of life beyond death. Integrity and sincerity are central to her creative process, shaping each of her works with a distinct voice.
+
+      She earned her M.M. in Composition from the Indiana University Jacobs School of Music and her B.M. from Yonsei University. Her string trio Resistance won second prize at the JoongAng Music Concours in 2018, and she has also received awards from The Music Association of Korea Competition and the ACL-Korea New Composers’ Competition. In 2019, she co-curated The Series of Combined Music I: Baroque and Contemporary Music and released her piano solo Incognito. The following year, she produced The Series of Combined Music III: Toy Instruments, where she premiered The Toy Box for electronics and toy instruments. Her Four Piano Etudes (2022) received a prize at the Ninth New Ariel Piano Composition Competition, organized by pianist Jeffrey Jacob.
+
+      In 2024, she was awarded the ARTZenter Emerging Composer’s Grant. Her Eye of the Earth for chamber orchestra was commissioned and premiered by the San Francisco Contemporary Music Players. Her works have been performed at venues such as Ilsin Hall and Nowon Arts Center (Korea), the ACL Festival in New Zealand, the Essen Now Festival at the Essen Philharmonie (Germany), and San Francisco’s Herbst Theatre.
+
+      Choi is currently pursuing a doctoral degree in Composition at Indiana University, where she also serves as an Associate Instructor in music theory.
     </p>
   </section>
 
   <section id="works">
     <h2>Works</h2>
-    <div id="works-grid">
-      <!-- YouTube #1 -->
-      <div class="work-card">
-        <div class="embed-container">
-          <iframe src="https://www.youtube.com/embed/eNub1p2FbNE" allowfullscreen></iframe>
-        </div>
-        <h3>Resistance Trio</h3>
-        <p>Piano, Clarinet, Cello</p>
-      </div>
 
-      <!-- YouTube #2 -->
-      <div class="work-card">
-        <div class="embed-container">
-          <iframe src="https://www.youtube.com/embed/TJnhdzKITvE" allowfullscreen></iframe>
-        </div>
-        <h3>Incognito</h3>
-        <p>Piano Solo</p>
-      </div>
-
-      <!-- YouTube #3 -->
-      <div class="work-card">
-        <div class="embed-container">
-          <iframe src="https://www.youtube.com/embed/li33nX6C4fI" allowfullscreen></iframe>
-        </div>
-        <h3>The Toy Box</h3>
-        <p>Electronics & Toy Instruments</p>
-      </div>
-
-      <!-- SoundCloud -->
-      <div class="work-card">
-        <div class="embed-container soundcloud-container">
-          <iframe src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/yeoul_choi/passenger-1-for-gayageum-clarinet-and-cello2022-recording&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" allow="autoplay"></iframe>
-        </div>
-        <h3>Passenger 1</h3>
-        <p>Gayageum, Clarinet, Cello</p>
-      </div>
-
+    <!-- 🎵 YouTube #1 -->
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000; margin-bottom: 20px;">
+      <iframe 
+        src="https://www.youtube.com/embed/eNub1p2FbNE" 
+        title="YouTube video player 1" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen
+        style="position: absolute; top:0; left:0; width:100%; height:100%;">
+      </iframe>
     </div>
+
+    <!-- 🎵 YouTube #2 -->
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000; margin-bottom: 20px;">
+      <iframe 
+        src="https://www.youtube.com/embed/TJnhdzKITvE" 
+        title="YouTube video player 2" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen
+        style="position: absolute; top:0; left:0; width:100%; height:100%;">
+      </iframe>
+    </div>
+
+    <!-- 🎵 YouTube #3 -->
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000; margin-bottom: 20px;">
+      <iframe 
+        src="https://www.youtube.com/embed/li33nX6C4fI" 
+        title="YouTube video player 3" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen
+        style="position: absolute; top:0; left:0; width:100%; height:100%;">
+      </iframe>
+    </div>
+
+    <!-- 🎵 SoundCloud -->
+    <div style="position: relative; padding-bottom: 30%; height: 0; overflow: hidden; max-width: 100%;">
+      <iframe 
+        width="100%" 
+        height="166" 
+        scrolling="no" 
+        frameborder="no" 
+        allow="autoplay" 
+        src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/yeoul_choi/passenger-1-for-gayageum-clarinet-and-cello2022-recording&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+      </iframe>
+    </div>
+
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:yeoul5536@gmail.com">yeoul5536@gmail.com</a></p>
-    <p>
-      Instagram: 
-      <a href="https://www.instagram.com/yeouuri/" target="_blank" rel="noopener noreferrer" class="instagram-link">
-        @yeouuri
-      </a>
-    </p>
+    <p>Email: yeoul5536@gmail.com</p>
+    <p>Instagram: @yeou_uri</p>
   </section>
 
   <footer>
     © 2025 Yeoul Choi — All Rights Reserved
   </footer>
-
-  <!-- 스크롤 시 fade-in JS -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const cards = document.querySelectorAll('.work-card');
-
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if(entry.isIntersecting){
-            entry.target.classList.add('visible');
-          }
-        });
-      }, { threshold: 0.2 });
-
-      cards.forEach(card => observer.observe(card));
-    });
-  </script>
 </body>
 </html>
