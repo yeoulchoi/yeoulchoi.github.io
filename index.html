@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>Yeoul Choi - Works</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- CSP: iframe 허용 -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com https://w.soundcloud.com;">
   <style>
     body {
@@ -74,12 +73,14 @@
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
+      transition: transform 0.3s, box-shadow 0.3s, opacity 0.8s ease, transform 0.8s ease;
+      opacity: 0;
+      transform: translateY(20px);
     }
 
-    .work-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+    .work-card.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     .embed-container {
@@ -143,20 +144,7 @@
       font-size: 0.9em;
       color: #666;
     }
-  </style
-    work-card {
-  opacity: 0;           
-  transform: translateY(20px); 
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-work-card.visible {
-  opacity: 1;
-  transform: translateY(0);
-}>
-  
-
-
+  </style>
 </head>
 <body>
   <header>
@@ -173,7 +161,7 @@ work-card.visible {
   <section id="about">
     <h2>About</h2>
     <p>
-      Yeoul Choi (b. 1995) is a Korean composer based in Indiana. Her music reflects a wide range of inspirations, from the beauty of nature and Korean traditions to social issues and life beyond death.
+      Yeoul Choi (b. 1995) is a Korean composer based in Indiana. Her music reflects a wide range of inspirations, from nature and Korean traditions to social issues and life beyond death.
     </p>
   </section>
 
@@ -216,23 +204,6 @@ work-card.visible {
         <p>Gayageum, Clarinet, Cello</p>
       </div>
 
-      <!-- Sample YouTube #4 -->
-      <div class="work-card">
-        <div class="embed-container">
-          <iframe src="https://www.youtube.com/embed/VIDEO_ID_4" allowfullscreen></iframe>
-        </div>
-        <h3>Sample Work 4</h3>
-        <p>Sample Description</p>
-      </div>
-
-      <!-- Sample SoundCloud #2 -->
-      <div class="work-card">
-        <div class="embed-container soundcloud-container">
-          <iframe src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/USERNAME/TRACK_ID&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" allow="autoplay"></iframe>
-        </div>
-        <h3>Sample Work 5</h3>
-        <p>Sample Description</p>
-      </div>
     </div>
   </section>
 
@@ -250,6 +221,22 @@ work-card.visible {
   <footer>
     © 2025 Yeoul Choi — All Rights Reserved
   </footer>
+
+  <!-- 스크롤 시 fade-in JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const cards = document.querySelectorAll('.work-card');
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if(entry.isIntersecting){
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.2 });
+
+      cards.forEach(card => observer.observe(card));
+    });
+  </script>
 </body>
 </html>
-
